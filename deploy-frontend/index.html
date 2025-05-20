@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Dynamic Website</title>
+     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="styles.css">
+   </head>
+   <body class="bg-gray-100 font-sans">
+     <div id="app" class="container mx-auto p-4">
+       <!-- Register Form -->
+       <div id="register-form" class="hidden bg-white p-6 rounded shadow-md max-w-md mx-auto">
+         <h2 class="text-2xl mb-4">Register</h2>
+         <form>
+           <input id="reg-email" type="email" placeholder="Email" class="w-full p-2 mb-4 border rounded">
+           <input id="reg-password" type="password" placeholder="Password" class="w-full p-2 mb-4 border rounded">
+           <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Register</button>
+         </form>
+       </div>
+       <!-- Login Form -->
+       <div id="login-form" class="bg-white p-6 rounded shadow-md max-w-md mx-auto">
+         <h2 class="text-2xl mb-4">Login</h2>
+         <form>
+           <input id="email" type="email" placeholder="Email" class="w-full p-2 mb-4 border rounded">
+           <input id="password" type="password" placeholder="Password" class="w-full p-2 mb-4 border rounded">
+           <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Login</button>
+         </form>
+         <p class="mt-2">
+           <a href="#" id="forgot-password" class="text-blue-500">Forgot Password?</a> | 
+           <a href="#" id="show-register" class="text-blue-500">Register</a>
+         </p>
+       </div>
+       <!-- Password Reset Form -->
+       <div id="reset-form" class="hidden bg-white p-6 rounded shadow-md max-w-md mx-auto">
+         <h2 class="text-2xl mb-4">Reset Password</h2>
+         <form>
+           <input id="reset-email" type="email" placeholder="Email" class="w-full p-2 mb-4 border rounded">
+           <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Send Reset Link</button>
+         </form>
+       </div>
+       <!-- Profile Section -->
+       <div id="profile" class="hidden bg-white p-6 rounded shadow-md max-w-md mx-auto">
+         <h2 id="welcome-message" class="text-2xl mb-4"></h2>
+         <button id="logout" class="bg-red-500 text-white p-2 rounded hover:bg-red-600">Logout</button>
+       </div>
+     </div>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script src="script.js"></script>
+   </body>
+   </html>
